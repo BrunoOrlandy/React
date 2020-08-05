@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-//import * as serviceWorker from './serviceWorker';
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import CadastroVideo from './pages/cadastro/Video';
+
+const Pagina404 = () => (<div>IANCHYA DERROTADO PELO MINI CEL</div>)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" component={Home} exact/>
+      <Route path="/cadastro/Video" component={CadastroVideo}/>
+      <Route component={Pagina404}/>
+    </Switch> 
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
