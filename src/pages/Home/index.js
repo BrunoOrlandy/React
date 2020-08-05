@@ -8,29 +8,26 @@ import Footer from '../../components/Footer';
 
 // wrapper pois ele é um agrupador / container
 const AppWrapper = styled.div`
-  background : var(--grayDark);
+  background: var(--grayDark);
 `;
 
 function Home() {
   return (
     <AppWrapper>
       <Menu/>
+
       <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
         videoDescription={"AAAAAAAAAAAAAAAAAA"}
-      ></BannerMain>
-
+      />
+      
       <Carousel 
         ignoreFirstVideo
         category={dadosIniciais.categorias[0]}> 
       </Carousel>
 
-
-      <Footer>
-        
-      </Footer>
-
+      <Footer/>
     </AppWrapper>
     
   );

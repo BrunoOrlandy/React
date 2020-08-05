@@ -5,6 +5,7 @@ import './index.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import CadastroVideo from './pages/cadastro/Video';
+import CadastroCategoria from './pages/cadastro/Categoria';
 
 const Pagina404 = () => (<div>IANCHYA DERROTADO PELO MINI CEL</div>)
 
@@ -13,6 +14,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/" component={Home} exact/>
       <Route path="/cadastro/Video" component={CadastroVideo}/>
+      <Route path="/cadastro/Categoria" component={CadastroCategoria}/>
       <Route component={Pagina404}/>
     </Switch> 
   </BrowserRouter>,
